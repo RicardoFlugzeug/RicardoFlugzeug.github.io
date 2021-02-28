@@ -43,24 +43,34 @@ for(let counter_a=1;counter_a<=qNum;counter_a++){
 }
 
 //問題一覧
-let rand11,rand12;
-let question1,answer1,question2,answer2,question3,answer3,question4,answer4;
+
+let question=["問題"];
+let answer=["答え"];
+
 function questionRefresh() {
 
     //１問目
-    rand11=Math.floor(Math.random()*10)+1; //1-10
-    rand12=Math.floor(Math.random()*10)+1; //1-10
-    question1 = "Aさんが"+rand11+"分間"+rand12+"km/h"+"で走りました。何km走れたでしょうか？"
-    answer1 = rand11*rand12/60+"km";
+    var rand11=Math.ceil(Math.random()*5)*200; //1-5 *200
+    var rand12=Math.floor(Math.random()*10)+1; //1-10
+    question[1] = "Aさんが"+rand11+"分間"+rand12+"km/h"+"で走りました。何km走れたでしょうか？"
+    answer[1] = rand11*rand12/60+"km";
 
-    question2 = "The 2nd number is "+ Math.random();
-    answer2 ="answer2"
+    //２問目
+    var rand21=Math.ceil(Math.random()*5)*200; //1-5 *200
+    var rand22=Math.floor(Math.random()*4)*10+30; //3-6 *10
+    var rand23=Math.floor(Math.random()*4+1)*5; //1-4 *5
+    var rand24=rand21*(100+rand22)*(100-rand23)/10000-rand21
+    question[2] = "ある商品について、原価の"+rand22+"%の利益が得られるように定価を設定しました。しかしその商品があまり売れなかったため、後に"+rand23+"%引きで売ったところ、１品あたりの利益は"+rand24+"円になりました。原価はいくらだったでしょうか？"
 
-    question3 = "The 3rd number is "+ Math.random();
-    answer3 ="answer3"
+    answer[2] =rand21+"円";
 
-    question4 = "The 4th number is "+ Math.random();
-    answer4 ="answer4"
+    question[3] = "The 3rd number is "+ Math.random();
+    answer[3] ="answer3"
+
+    question[4] = "The 4th number is "+ Math.random();
+    answer[4] ="answer4"
+
+    console.log(question[2],answer[2]);
 }
 
 //シャッフル用
@@ -82,12 +92,8 @@ function seisei(){
         const createp_que=document.createElement("p");
         const createp_ans=document.createElement("p");
         questionRefresh();
-        const questionNumber="question"+randQNumber;
-        var qNumberObj = (new Function("return " + questionNumber))();
-        const answerNumber="answer"+randQNumber;
-        var aNumberObj = (new Function("return " + answerNumber))();
-        const qText = document.createTextNode(qNumberObj);
-        const aText = document.createTextNode(aNumberObj);
+        const qText = document.createTextNode(question[randQNumber]);
+        const aText = document.createTextNode(answer[randQNumber]);
         createp_que.appendChild(qText);
         createp_ans.appendChild(aText);
         const questionNumId =document.getElementById("question"+counter_b);
