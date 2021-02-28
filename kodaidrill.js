@@ -81,7 +81,6 @@ function seisei(){
         randQNumber=randomQuestionArray[counter_b-1];
         const createp_que=document.createElement("p");
         const createp_ans=document.createElement("p");
-        createp_ans.className='answer';
         questionRefresh();
         const questionNumber="question"+randQNumber;
         var qNumberObj = (new Function("return " + questionNumber))();
