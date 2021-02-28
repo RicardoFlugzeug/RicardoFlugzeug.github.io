@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 'use strict'
 
 //問題数
