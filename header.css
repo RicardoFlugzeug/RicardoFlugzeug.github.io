@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+<div class="headimg">
+    <br>
+<h5>aviation magazine</h5>
+<h4><a href="https://flugzeug.hatenablog.com/"><font color="white">FLUGZEUG</font></a></h4>
+<h5>Do you wanna fly with me?</h5>
+<br><br>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<span class="menu-toggle"><i class="blogicon-reorder lg"></i><b>MENU</b></span>
+<ul id='menu'>
+<div class="menu-inner">
+<li><a href='https://flugzeug.hatenablog.com/'>TOP</a></li>
+<li><a href='https://flugzeug.hatenablog.com/about'>初めての方</a></li>
+<li><a href='https://flugzeug.hatenablog.com/entry/aviationclass'>航空講座</a></li>
+<li><a href='https://flugzeug.hatenablog.com/archive/category/%E8%88%AA%E7%A9%BA%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A2'>航空キャリア</a></li>
+<li><a href="https://flugzeug.hatenablog.com/quiz">飛行機クイズ</a></li>
+<li><a href='https://flugzeug.hatenablog.com/archive/category/%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%82%B0%E3%83%83%E3%82%BA'>おすすめグッズ</a></li>
+<li><a href='https://flugzeug.hatenablog.com/archive/category/BLOG'>BLOG</a></li>
+<li><a href='https://flugzeug.hatenablog.com/inquiry'>CONTACT</a></li>
+
+</div>
+</ul>
+</div> <!-- header 閉じ-->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+
+    jQuery(function($){
+        jQuery(".menu-toggle").on("click", function() {
+            jQuery(this).next().slideToggle();
+        });
+    });
+     jQuery(window).resize(function(){
+    var win = jQuery(window).width();
+    var p = 768;
+    if(win > p){
+      jQuery("#menu").show();
+    } else {
+      jQuery("#menu").hide();
+    }
+  });
+</script>
+
+
+<!--更新日表示用-->
+<!--jQuery 読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--Font Awesome 読み込み-->
+<link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+
+
