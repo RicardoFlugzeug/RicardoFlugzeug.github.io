@@ -21,12 +21,31 @@
 .btn_blue:hover{
     background: #1d49aa;
 }
+.btn_cyan{
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #46c6d7;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+.btn_cyan:hover{
+    background: #1d9aaa;
+}
 #mondai{
     margin: 50px 5px;
-    padding: 30px 30px;
+    padding: 10px 30px 30px;
     border: 3px solid #8888889c;  
 }
 #mondai_head{
     text-align: center;
     font-size: 120%;
+    font-weight: bold;
+}
+#timer{
+    text-align: right;
+}
+#timer::before{
+    content:"StopWatch："
 }
