@@ -1,7 +1,7 @@
 'use strict'
 
 //問題数
-let qNum = 50; //最後はconst になおす？
+let qNum = 20; //最後はconst になおす？
 
 //問題数の大きさの配列用意
 let questionArray= [];
@@ -240,7 +240,7 @@ function questionRefresh() {
     answer[20]=rand201+"km/h" 
 
 
-    qNum = 20;
+    //qNum = 20;
     console.log(question[qNum],answer[qNum]);
 }
 
