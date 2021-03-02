@@ -56,6 +56,7 @@
 #timer::before{
     content:"StopWatch："
 }
-#mondaiButton{
+#mondaiButton, #timerButton{
     text-align: center;
+    margin:5px 0px;
 }
