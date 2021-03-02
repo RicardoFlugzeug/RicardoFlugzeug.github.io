@@ -41,7 +41,7 @@
     background: #1d9aaa;
 }
 #mondaiArea{
-    margin: 50px 5px;
+    margin: 10px 5px;
     padding: 10px 30px 30px;
     border: 3px solid #8888889c;  
 }
@@ -55,4 +55,7 @@
 }
 #timer::before{
     content:"StopWatch："
+}
+#mondaiButton{
+    text-align: center;
 }
