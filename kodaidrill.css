@@ -54,7 +54,8 @@
     content:"StopWatch："
 }
 #buttonBlock{
-    margin:5px auto;
+    text-align: center;
+    margin:5px 0px;
 }
 
 @media screen and (min-width: 768){
