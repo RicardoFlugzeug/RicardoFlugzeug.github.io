@@ -58,6 +58,6 @@
     margin:5px 0px;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 900px){
     .resBr{display: none;}
 }
