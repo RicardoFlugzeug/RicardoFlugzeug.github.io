@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-/* p{
-    display: inhereit;
-} */
 .answer{
     visibility:hidden;
     text-align: right;
@@ -17,7 +14,7 @@
     visibility:visible;
 }
 .btn_blue{
-     appearance: none;
+    appearance: none;
     border: 0;
     border-radius: 5px;
     background: #4676D7;
@@ -59,4 +56,8 @@
 #mondaiButton, #timerButton{
     text-align: center;
     margin:5px 0px;
+}
+
+@media screen and (min-width: 768){
+    .resBr{display: none;}
 }
