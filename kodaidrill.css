@@ -53,9 +53,8 @@
 #timer::before{
     content:"StopWatch："
 }
-#mondaiButton, #timerButton{
-    text-align: center;
-    margin:5px 0px;
+#buttonBlock{
+    margin:5px auto;
 }
 
 @media screen and (min-width: 768){
