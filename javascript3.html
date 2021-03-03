@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+    <style>
+        @media print{
+            .NoPrint{display:none;}
+        }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="NoPrint">
+        <p>ここは印刷されません</p>
+    </div>
+
+    <div class="drill-ud PrintArea">
+        <input type="button" value="問題の更新" class="update1"            id="update1" > 
+        <input type="button" value="答えを表示" class="toggle_btn update2" id="update2" data-area=".drill-a">
+    </div>
+ 
+    <div id="drill" class="PrintArea">
+        <ul class="drillTex" id="drillTex" style="height: 30%;">
+            <li>
+                <span class="drill-text">
+                <!-- 最初に与えられた仕事に加え、
+                時間ととも一定の量だけ増えていく仕事をすべてすませるのに3人なら20時間、
+                6人なら5時間かかる。では7人なら何時間かかるか。 -->
+                </span>
+                
+                <ul class="drill1An0">
+                    <li>
+                        <span class="drill1A hidden">
+                            <!-- 1人が1時間でこなす仕事を「1」と定義すると、
+                            3人×20時間で60、6人×5時間で30。
+                            この差の30は15時間で増えた仕事なので、
+                            1時間で2の仕事が増える。20時間で40の仕事が増えるので、
+                            これを60から引いた20が最初の仕事。
+                            7人で仕事をすると5ずつの仕事が最初の仕事から減っていくので、
+                            20 ÷ 5 ＝ 4時間で仕事が終わる。 -->
+                        </span>
+                    </li>
+                </ul>
+                <ul class="drill1An"><li><span class="drill1A hidden">4時間</span></li></ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+    'use strict'
+
+    console.log('こんにちわ');
+    document.write("こっちは！");
+
+    let target = document.getElementById('drill');
+
+
+
+  let drill = document.getElementById('drill');
+  let update1 = document.getElementById('update1');
+  let update2 = document.getElementById('update2');
+  let drill1A = document.getElementsByClassName('drill1A');
+  let target = document.getElementById("drill");
+
+//   function mixedFraction(numerator,denominator){
+//     /** 約分 */
+//     var r, m = Math.max(numerator, denominator), n = Math.min(numerator, denominator);
+//     while ((r = m % n) != 0) {
+//       m = n;
+//       n = r;
+//     }//最大公約数n
+//     numerator /= n;
+//     denominator /= n;
+//     var integer = Math.floor(numerator / denominator);
+//     numerator %= denominator;
+//     return [integer,numerator,denominator]
+//   }
+
+  function createUl(newTarget){
+    var newDrill = document.createElement("ul");
+    newDrill.style.cssText = "height: 30%;"
+    newDrill.setAttribute("class", "drillTex");
+    newDrill.setAttribute("id", "drillTex");
+    newDrill.appendChild((newTarget));
+    target.appendChild(newDrill);
+  }
+
+  function smallestCommons(num1,num2) {
+    var r, m = Math.max(num1, num2), n = Math.min(num2, num1);
+    while ((r = m % n) != 0) {
+      m = n;
+      n = r;
+    }//最大公約数n
+    return num1 * num2 / n;
+}
+
+//シャッフル
+function shuffleAry(ary) {
+  var i = ary.length;
+  while(i){
+    var j = Math.floor(Math.random()*i);
+    var t = ary[--i];
+    ary[i] = ary[j];
+    ary[j] = t;
+  }
+  return ary;
+}
+
+
+
+  function random() {
+    let div1 = document.getElementById("drill");
+    while (div1.firstChild) {
+      div1.removeChild(div1.firstChild);
+    }
+    //文章問題1 最初に与えられた仕事に加え、時間ととも一定の量だけ増えていく仕事をすべてすませるのに3人なら6時間、5人なら2時間かかる。では4人なら何時間かかるか。
+    // 1人が1時間でこなす仕事を「1」と定義すると、3人×6時間の仕事量は18、5人×2時間の仕事量は10。この仕事量の差の8は4時間で増えた仕事量なので、1時間で2の仕事量が増える。6時間で12の仕事が増えるので、これを18から引いた6が最初の仕事量。4人で仕事をすると最初の仕事が2ずつ減るので、6÷2＝3。
+    var workPerH = 2 + Math.floor(Math.random() * 4 );//2~5
+    var people1 = workPerH + 2 + Math.floor(Math.random() * 3 );//+2~4
+    var people2 = people1 + 1 + Math.floor(Math.random() * 3 );//+2~4
+    var initWork =  (people1 - workPerH) * (people2 - workPerH);
+    var people3 = workPerH + 1;
+    var peopleSets = [people1,people2,people3];
+    [people1,people2,people3] = shuffleAry(peopleSets);
+    var time1 = initWork / (people1 - workPerH)
+    var time2 = initWork / (people2 - workPerH)
+    var time3 = initWork / (people3 - workPerH)
+    var newTarget = document.createElement("li");
+    newTarget.innerHTML =
+    '<span class="drill-text">最初に与えられた仕事に加え、時間ととも一定の量だけ増えていく仕事をすべてすませるのに' +
+    people1 +
+    '人なら' +
+    time1 +
+    '時間、' +
+    people2 +
+    '人なら' +
+    time2 +
+    '時間かかる。では' +
+    people3 +
+    '人なら何時間かかるか。</span>' +
+    '<ul class="drill1An0"><li><span class="drill1A">1人が1時間でこなす仕事を「1」と定義すると、' +
+    people1 +
+    '人×' +
+    time1 +
+    '時間で' +
+    (people1 * time1) +
+    '、' +
+    people2 +
+    '人×' +
+    time2 +
+    '時間で' +
+    (people2 * time2) +
+    '。この差の' +
+    Math.abs(people1 * time1 - people2 * time2) +
+    'は' +
+    Math.abs(time1 - time2) +
+    '時間で増えた仕事なので、1時間で' +
+    workPerH  +
+    'の仕事が増える。' +
+    time1 +
+    '時間で' +
+    (time1 * workPerH) +
+    'の仕事が増えるので、これを' +
+    (people1 * time1) +
+    'から引いた' +
+    initWork +
+    'が最初の仕事。' +
+    people3 +
+    '人で仕事をすると' +
+    (people3 - workPerH) +
+    'ずつの仕事が最初の仕事から減っていくので、' +
+    initWork +
+    ' ÷ ' +
+    (people3 - workPerH) +
+    ' ＝ ' +
+    time3 +
+    '時間で仕事が終わる。' +
+     '</span></ul><ul class="drill1An"><li><span class="drill1A">' +
+     time3  +
+     '時間</span></ul>';
+    createUl(newTarget);
+    
+    for(var i=0;i<drill1A.length;i++){
+      drill1A[i].classList.add('hidden');
+    }
+    document.getElementById('update2').value ="答えを表示";
+  }
+  
+  random();
+
+  update1.addEventListener('click', function(){
+    random();
+  });
+  window.checkdiv = checkdiv
+  function checkdiv(obj, id) {
+    if (obj.checked) {
+      document.getElementById(id).style.display = "block";
+    }
+    else {
+      document.getElementById(id).style.display = "none";
+    
+  }
+
+  update2.addEventListener('click', function(){
+    if (drill1A[0].classList.contains('hidden') == true) {
+      for(var i=0;i<drill1A.length;i++){
+        drill1A[i].classList.remove('hidden');
+        update2.value = '答えを非表示';
+      }
+    }else{
+      for(var i=0;i<drill1A.length;i++){
+        drill1A[i].classList.add('hidden');
+        update2.value = '答えを表示';
+      }}
+    });
+  }
+
+
+    </script> 
+  </body>
+</html>

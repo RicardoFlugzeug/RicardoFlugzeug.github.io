@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+    <style>
+        h3 {
+            padding: 0.25em 0.5em;/*上下 左右の余白*/
+            color: #191970;/*文字色*/
+            background: transparent;/*背景透明に*/
+            border-left: solid 8px #191970;/*左線*/
+            line-height: 1.5;
+            background-color: #f5f5f5;
+        }
+        h4 {
+            position: relative;
+            color: #333;
+            border-bottom: 4px solid #ccc;
+            padding: 5px 7px;
+        }  
+        h4::before {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 20%;
+            height: 4px;
+            background-color: #3498db;
+            z-index: 2;
+            content: '';
+        }
+    </style>
+
+    <style>
+        
+        p{
+            display: inhereit;
+        } 
+        .answer{
+            visibility:hidden;
+            text-align: right;
+            color: red;
+        }
+        .answer::before{
+            content: "答え⬇︎";
+            color: #4e4e4e;
+            font-size: 110%;
+        }
+        .answerhidden_off{
+            visibility:visible;
+        }
+        .btn_blue{
+            appearance: none;
+            border: 0;
+            border-radius: 5px;
+            background: #4676D7;
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+        .btn_blue:hover{
+            background: #1d49aa;
+        }
+        .btn_cyan{
+            appearance: none;
+            border: 0;
+            border-radius: 5px;
+            background: #46c6d7;
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+        .btn_cyan:hover{
+            background: #1d9aaa;
+        }
+        #mondai{
+            margin: 50px 5px;
+            padding: 10px 30px 30px;
+            border: 3px solid #8888889c;  
+        }
+        #mondai_head{
+            text-align: center;
+            font-size: 120%;
+            font-weight: bold;
+        }
+        #timer{
+            text-align: right;
+        }
+        #timer::before{
+            content:"StopWatch："
+        }
+
+    </style>
+  </head>
+  <body>
+    
+    <button onclick="koushin();" class="btn_blue">更新</button>
+    <button onclick="answer_onoff();" class="btn_blue">答えを表示</button>
+    <button id="start"class="btn_cyan">start</button>
+    <button id="stop"class="btn_cyan">stop</button>
+    <button id="reset"class="btn_cyan">reset</button>
+    <div id="mondai">
+        <div id="mondai_head"><p>問 題 一 覧</p></div>
+        <div id="timer">00:00:000</div>
+    </div>
+
+    <script src="https://ricardoflugzeug.github.io/timer.js"></script>
+    <script>
+        'use strict'
+
+        //問題数
+        const qNum = 4;
+        
+        //問題数の大きさの配列用意
+        let questionArray= [];
+        for(let counter_e=1;counter_e<=qNum;counter_e++){
+            questionArray.push(counter_e);
+        }
+
+        //問題の数だけ、divを生成
+        const mondai =document.getElementById("mondai");
+        for(let counter_a=1;counter_a<=qNum;counter_a++){
+            //各問div
+            const creatediv = document.createElement("div");
+            creatediv.id='mondai'+ counter_a;
+            mondai.appendChild(creatediv);
+            //中にそれぞれ３つdiv作成
+            const mondai_content =document.getElementById('mondai'+ counter_a);
+            //1
+            const creatediv_title = document.createElement("div");
+            creatediv_title.id ='qTitle'+ counter_a;
+            creatediv_title.className='qTitle';
+            mondai_content.appendChild(creatediv_title);
+            //2
+            const creatediv_que = document.createElement("div");
+            creatediv_que.id ='question'+ counter_a;
+            creatediv_que.className='question';
+            mondai_content.appendChild(creatediv_que);
+            //3
+            const creatediv_ans = document.createElement("div");
+            creatediv_ans.id ='answer'+ counter_a;
+            creatediv_ans.className='answer';
+            mondai_content.appendChild(creatediv_ans);
+
+            //qTitleに「x問目」と記入
+            const createh4_qTitle=document.createElement("h4");
+            const tText = document.createTextNode(counter_a+"問目");
+            createh4_qTitle.appendChild(tText);
+            const qTitleId= document.getElementById('qTitle'+counter_a);
+            qTitleId.appendChild(createh4_qTitle);
+        }
+
+        //問題一覧
+
+        let question=["問題"];
+        let answer=["答え"];
+
+        function questionRefresh() {
+
+            //１問目
+            var rand11=Math.floor(Math.random()*2); //0-1
+            var rand12=Math.floor(Math.random()*2); //0-1
+            var rand13=Math.floor(Math.random()*2); //0-1
+            var rand14=Math.floor(Math.random()*2); //0-1
+            var rand15=Math.floor(Math.random()*2); //0-1
+            var rand16=Math.floor(Math.random()*2); //0-1
+            question[1] = "２進数 1"+rand11+rand12+rand13+rand14+rand15+rand16+"は、10進数でいくつでしょうか？"
+            answer[1] = 64+rand11*32+rand12*16+rand13*8+rand14*4+rand15*2+rand16;
+
+            //２問目
+            var rand21=Math.ceil(Math.random()*5)*200; //1-5 *200
+            var rand22=Math.floor(Math.random()*4)*10+30; //3-6 *10
+            var rand23=Math.floor(Math.random()*4+1)*5; //1-4 *5
+            var rand24=rand21*(100+rand22)*(100-rand23)/10000-rand21
+            question[2] = "ある商品について、原価の"+rand22+"%の利益が得られるように定価を設定しました。しかしその商品があまり売れなかったため、後に"+rand23+"%引きで売ったところ、１品あたりの利益は"+rand24+"円になりました。原価はいくらだったでしょうか？"
+            answer[2] =rand21+"円";
+
+            //３問目
+            var rand31=Math.floor(Math.random()*2); //0-1
+            var rand32=Math.floor(Math.random()*2); //0-1
+            var rand33=Math.floor(Math.random()*2); //0-1
+            var rand34=Math.floor(Math.random()*2); //0-1
+            var rand35=Math.floor(Math.random()*2); //0-1
+            var rand36=Math.floor(Math.random()*2); //0-1
+            var rand37=64+rand31*32+rand32*16+rand33*8+rand34*4+rand35*2+rand36;
+            question[3] = "10進数 "+ rand37 +"は、2進数でいくつでしょうか？";
+            answer[3] ="1"+rand31+rand32+rand33+rand34+rand35+rand36;
+
+            question[4] = "The 4th number is "+ Math.random();
+            answer[4] ="answer4"
+
+            console.log(question[2],answer[2]);
+        }
+
+        //シャッフル用
+        const shuffle = ([...array]) => {
+            for (let i = array.length - 1; i >= 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }  
+
+        //問題生成
+        let randQNumber;
+        let randomQuestionArray =[];
+        function seisei(){
+            randomQuestionArray=shuffle(questionArray);
+            for(let counter_b=1;counter_b<=qNum;counter_b++){
+                randQNumber=randomQuestionArray[counter_b-1];
+                const createp_que=document.createElement("p");
+                const createp_ans=document.createElement("p");
+                questionRefresh();
+                const qText = document.createTextNode(question[randQNumber]);
+                const aText = document.createTextNode(answer[randQNumber]);
+                createp_que.appendChild(qText);
+                createp_ans.appendChild(aText);
+                const questionNumId =document.getElementById("question"+counter_b);
+                const answerNumId =document.getElementById("answer"+counter_b);
+                questionNumId.appendChild(createp_que);
+                answerNumId.appendChild(createp_ans);
+            }
+        }
+        seisei();
+
+        //更新ボタン
+        function koushin(){
+            //既存を削除
+            for(let counter_c=1;counter_c<=qNum;counter_c++){
+                const questionRemove =document.getElementById("question"+counter_c);
+                questionRemove.removeChild(questionRemove.firstChild);
+                const answerRemove =document.getElementById("answer"+counter_c);
+                answerRemove.removeChild(answerRemove.firstChild);
+            }
+            //新たに生成
+            seisei();
+            
+            //答え表示リセット
+            var answersw_check=document.getElementById("answer1");
+            if(answersw_check.classList.contains("answerhidden_off")){
+                for(let counter_f=1;counter_f<=qNum;counter_f++){
+                    var answerCN = document.getElementById('answer'+counter_f); 
+                    answerCN.classList.toggle('answerhidden_off');
+                }
+            }
+        }
+
+        //答え表示ボタン
+        function answer_onoff(){
+            for(let counter_f=1;counter_f<=qNum;counter_f++){
+                var answerCN = document.getElementById('answer'+counter_f); 
+                answerCN.classList.toggle('answerhidden_off');
+            }
+      　}
+
+    </script> 
+  </body>
+</html>

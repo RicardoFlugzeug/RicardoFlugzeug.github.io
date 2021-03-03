@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>はじめてのJavascript</title>
+    <style>
+      body{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box{
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        cursor: pointer;
+        transition: 0.8s;
+        margin: 0px 8px 8px 0px;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      .circle{
+        background-color: pink;
+        border-radius: 50%;
+        transform: rotate(360deg);
+      }
+
+      .win{
+        background-color: pink;
+        border-radius: 50%;
+        transform: rotate(360deg);
+      }
+
+      .circle{
+        transform: scale(0.9);
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- <div class="box" id="target1">  </div>  -->
+    <!-- <div class="box" id="target2">  </div> -->
+    <!-- <div class="box" id="target3">  </div>  -->
+
+    <script>
+      'use strict'
+
+      /* const target1 = document.getElementById('target1'); 
+      const target2 = document.getElementById('target2'); 
+      const target3 = document.getElementById('target3'); 
+
+      target1.addEventListener('click',() => {
+        target1.classList.toggle('circle'); 
+      });
+      target2.addEventListener('click',() => {
+        target2.classList.toggle('circle'); 
+      });
+      target3.addEventListener('click',() => {
+        target3.classList.toggle('circle'); 
+      });  
+      */
+
+      const num = 5;
+      const winner = Math.floor(Math.random() * num ); //0-4のランダム整数
+
+      for(let i=0; i<num; i++){
+        const div = document.createElement('div');
+        div.classList.add('box');
+
+        div.addEventListener('click',() => {
+          if(i===winner){
+            div.textContent = 'win!';
+            div.classList.add('win');
+          }else{
+            div.textContent = 'lose!';
+            div.classList.add('lose');
+          }
+        });
+
+        document.body.appendChild(div);
+
+      }
+    </script> 
+  </body>
+</html>
