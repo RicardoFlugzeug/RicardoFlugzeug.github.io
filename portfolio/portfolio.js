@@ -25,7 +25,7 @@ $(function(){
 
     //scroll
     $(window).on('load scroll',function (){
-		$('#header').each(function(){
+		$('#headertop').each(function(){
 			// //ターゲットの位置を取得
 			// var target = $(this).offset().top;
 			//スクロール量を取得
@@ -36,9 +36,11 @@ $(function(){
 			if (scroll > 100){
 				//クラスを付与
 				$(this).addClass('headershow');
+                $('.toggle-btn span').css('background','#000')
 			}
             else if (scroll < 100){
                 $(this).removeClass('headershow');
+                $('.toggle-btn span').css('background','#fff')
             }
 		});
 	});
@@ -49,8 +51,8 @@ $(function(){
     {
     type: 'oneByOne', //1パスずつ書く
     start: 'inViewport', //ビューポート内に表示されたらスタート
-    duration: 300, //速さ
-    delay: 200,
+    duration: 500, //速さ
+    delay: 300,
     animTimingFunction:Vivus.LIINAR//イージング 
     });
 

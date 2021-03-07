@@ -37,118 +37,28 @@ ul{
 }
 
 
+
 /*header------------------------------------*/
-#header{
+#headertop{
     position: fixed;
-    top: -100px;
-    left: 0;
+    top: -200px;
     z-index: 10;
     background: #fff;
     width: 100%;
     height: 10vh;
     opacity: 0;
     transition: 1s;
-}
-#header.headershow{
-    opacity: 1;
-    top: 0;
-}
-#headercontent{
-    padding-top: 3vh;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding: 0 4%;
+    margin: 0 auto;
 }
-h1{
-    letter-spacing: 1rem;
-}
-h2{
-    text-align: center;
-    display: inline-block;
-    font-size: 2rem;
-    padding: 10px;
-    border-bottom: 5px solid #084968a4;
-    border-radius: 2px;
-    margin-bottom: 20px;
-}
-
-
-/*btn&nav-----*/
-.toggle-btn{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    margin: 10px;
-    transition:0.5s;
-}
-.toggle-btn span{
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background: #000;
-    transition: 0.5s;
-}
-.toggle-btn span:nth-child(1){
-    top: 8px;
-}
-.toggle-btn span:nth-child(2){
-    bottom: 8px;
-}
-.open .toggle-btn span:nth-child(1){
-    transform: rotate(405deg) translateY(8px);
-}
-.open .toggle-btn span:nth-child(2){
-    transform: rotate(-405deg) translateY(-8px) ;
-}
-.open .toggle-btn{
-    transform: translateX(4px);
-}
-
-
-
-/*opennav*/
-nav{
-    opacity: 0;
-    position: absolute;
-    top: 10vh;
-    left: -200px;
-    transition: 0.5s;
-    padding: 30px;
-}
-nav li{
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-nav a{
-    color: #fff;
-    width: 200px;
-    display: inline-block;
-}
-.open nav{
-    transform: translateX(200px);
+#headertop.headershow{
     opacity: 1;
-    z-index: 30;
-}
-
-
-/*mask*/
-#mask{
-    display: none;
-}
-.open #mask{
-    display: block;
-    position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    z-index: 20;
 }
 
-/*mainvisual-------------------*/
+/*mainvisual*/
 #mainvisual{
     width: 100%;
     height: 105vh;
@@ -183,12 +93,119 @@ nav a{
     object-fit: fill;
 }
 
+h1{
+    letter-spacing: 1rem;
+}
+
+#btnbox{
+    position: fixed;
+    z-index: 30;
+    right: 0;
+    width: 50px;
+    height: 10vh;
+    padding-right: 4vw;
+    display: flex;
+    align-items: center;
+}
+
+/*btn&nav-----*/
+.toggle-btn{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    transition:0.5s;
+}
+.toggle-btn span{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    transition: 0.5s;
+}
+.toggle-btn span:nth-child(1){
+    top: 8px;
+}
+.toggle-btn span:nth-child(2){
+    bottom: 8px;
+}
+.open .toggle-btn span:nth-child(1){
+    transform: rotate(405deg) translateY(8px);
+}
+.open .toggle-btn span:nth-child(2){
+    transform: rotate(-405deg) translateY(-8px) ;
+}
+.open .toggle-btn{
+    transform: translateX(4px);
+}
+
+
+
+/*opennav*/
+nav{
+    opacity: 0;
+    position: fixed;
+    top: 10vh;
+    left: -200px;
+    transition: 0.5s;
+    padding: 30px;
+}
+nav li{
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+nav li:first-child{
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+nav a{
+    color: #fff;
+    width: 200px;
+    display: inline-block;
+}
+.open nav{
+    transform: translateX(200px);
+    opacity: 1;
+    z-index: 30;
+}
+
+
+/*mask*/
+#mask{
+    display: none;
+}
+.open #mask{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    z-index: 20;
+}
 
 
 /*main---------------------------------*/
 main .wrapper{
     /* 後で消す！！ */
     padding-top: 10vh; 
+}
+
+.sectiontitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 10px;
+    border-bottom: 5px solid #084968a4;
+    border-radius: 2px;
+    margin-bottom: 20px;
 }
 
 
@@ -203,3 +220,23 @@ main .wrapper{
 
 
 
+@media screen and (min-width:1900px){
+    #btnbox{
+        display: none;
+    }
+    nav{
+        top:30vh;
+        left: 0;
+        opacity: 1;
+    }
+    nav li a{
+        color: #000;
+        width: 150px;
+    }
+    nav li{
+        border-bottom: 1px solid rgb(0,0,0);
+    }
+    nav li:first-child{
+        border-top: 1px solid rgb(0,0,0) ;
+    }
+}
