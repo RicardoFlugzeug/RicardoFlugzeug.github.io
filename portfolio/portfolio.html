@@ -42,29 +42,70 @@
     </header>
     
     <main>
-        <section id="about" class="wrapper">
+        <section id="about" class="wrapper appeal">
             <div class="sectiontitle"><h2>ABOUT</h2></div>
             <div class="sectioncontent">
                 <img src="profile.png" alt="profile photo">
                 <div class="profile">
+                    <h3>りかるど</h3>
                     <p>1998年生まれ。神奈川育ち。<b>高校生の頃にブログに興味を持ち、ライティングとコーディングを同時に開始。</b>現在は神奈川県私立大学理工学部に所属しています。趣味は<b>「飛行機」と「ダンス」</b>。週末は、所属しているダンスサークルで踊っています。</p>
                     <p><b>様々な方と沢山お話して刺激を感じるのが、何よりも幸せです。</b>毎回異なる背景をお持ちの方の相談をお聞きさせて頂くからこそ、WEB制作のお仕事は大好きです。</p>
                 </div>
             </div>
         </section>
-        <section id="achievement" class="wrapper">
+        <section id="service" class="wrapper appeal">
+            <div class="sectiontitle"><h2>SERVICE</h2></div>
+            <div class="sectioncontent">
+                <div class="servicecontent servicedirection">
+                    <h3>ディレクション</h3>
+                    <img src="icon-web.png" alt="ディレクション">
+                    <p>ゼロからサイト制作を承ります。「個人経営だけどサイトが欲しい」「古いサイトを今風にしたい」「商品を売るための集客LPが欲しい」など、全ての希望に答えます。</p>
+                </div>
+                <div class="servicecontent servicecoding">
+                    <h3>コーディング</h3>
+                    <img src="icon-code.png" alt="コーディング">
+                    <p>すでにデザインが決まっているものを、HTML5・CSS3・JavaScriptを用いて、実際にサイトにしていきます。ご希望であればこちらからも、よりよいデザイン案・アニメーション案などを提案させていただきます。</p>
+                </div>
+                <div class="servicecontent serviceresponsive">
+                    <h3>レスポンシブ</h3>
+                    <img src="icon-sp.png" alt="レスポンシブ">
+                    <p>サイトの７割はスマホで閲覧されます。サイト作成やコーディングには、レスポンシブ対応が必須です。"りかるど"なら追加料金なしで、スマホでタッチだからこその特性をいかした、便利すぎるスマホ用画面をもつくります。</p>
+                </div>
+            </div>
+            <div class="sectionend">
+                <ul id="skilllist">
+                    <li class="skilllist"><p>HTML5</p><p class="checkmark">✔︎</p></li>
+                    <li class="skilllist"><p>CSS3</p><p class="checkmark">✔︎</p></li>
+                    <li class="skilllist"><p>JavaScript</p><p class="checkmark">✔︎</p></li>
+                </ul>
+            </div>
+        </section>
+        <section id="achievement" class="wrapper appeal">
             <div class="sectiontitle"><h2>ACHIEVEMENT</h2></div>
 
             <p>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br>コンテンツ<br></p>
         </section>
-        <section id="service" class="wrapper">
-            <div class="sectiontitle"><h2>SERVICE</h2></div>
-        </section>
-        <section id="contact" class="wrapper">
+        <section id="contact" class="wrapper appeal">
             <div class="sectiontitle"><h2>CONTACT</h2></div>
-            <form>
-                <input type="text">
-                <input type="button" value="送信">
+            <p class="contactcomment" align="center">下記フォームに必要事項を入力後、<br class="resbreak">確認ボタンを押してください。</p>
+            <form method="post" action="mail.php">
+              <table class="formTable">
+                <tr>
+                  <th>お名前</th>
+                  <td><input type="text" name="お名前" /></td>
+                </tr>
+                <tr>
+                  <th>Mail（半角）</th>
+                  <td><input type="text" name="Email" /></td>
+                </tr>
+                <tr>
+                  <th>お問い合わせ内容<br /></th>
+                  <td><textarea name="お問い合わせ内容" cols="50" rows="5"></textarea></td>
+                </tr>
+              </table>
+              <div class="centerflex" align="center">
+                <div class="submit-btn"><input type="submit" value="確認" /></div>
+              </div>
             </form>
         </section>
     </main>

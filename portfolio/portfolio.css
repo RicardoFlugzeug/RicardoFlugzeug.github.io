@@ -20,7 +20,7 @@ img{
     width: 100%;
 }
 .wrapper{
-    padding: 0 4%;
+    padding: 0 6%;
     max-width: 1500px;
     margin: 0 auto;
 }
@@ -37,6 +37,16 @@ ul{
 }
 b{
     background: linear-gradient(transparent 70%, rgba(255, 251, 0, 0.829) 30%);
+}
+h3{
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #000;
+}
+.resbreak{
+    display: none;
 }
 
 
@@ -108,7 +118,7 @@ h1{
     right: 0;
     width: 50px;
     height: 10vh;
-    margin-right: 4%;
+    margin-right: 6%;
     display: flex;
     align-items: center;
 }
@@ -210,7 +220,7 @@ h2{
     display: inline-block;
     font-size: 2rem;
     padding: 10px 0 0.2em;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     position: relative;
 }
 
@@ -230,7 +240,7 @@ h2{
     justify-content: space-around;
     padding: 10px 5px;
     background: #e9f3fe69;
-    border-radius: 5%;
+    border-radius: 5vw;
 }
 #about img{
     border-radius: 50%;
@@ -243,6 +253,10 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+#about .profile h3{
+    width: 150px;
+    padding-top: 20px;
 }
 #about .profile p{
     line-height: 3rem;
@@ -258,13 +272,151 @@ h2{
 }
 
 
+/*service*/
+#service .sectioncontent{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: #3d65811e;
+    border-radius: 5vw;
+    padding-bottom: 20px;
+}
+#service .servicecontent{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+#service h3{
+    width: 150px;
+    padding-top: 20px;
+}
+#service img{
+    padding: 3vw;
+}
+#service .sectionend{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 10px;
+}
+#skilllist li{
+    font-size: 2.5rem;
+    position: relative;
+}
+#skilllist li::before{
+    content: '□';
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding-right: 10px;
+    vertical-align: middle;
+    color: rgba(0, 0, 0, 0.3);
+}
+#skilllist li p{
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+#skilllist .checked p{
+    color: rgba(0, 0, 0, 0.8);
+}
+#skilllist .checkmark{
+    color: red;
+    position: absolute;
+    top: 1rem;
+    left: 0.2rem;
+    font-size: 1.5rem;
+    opacity: 0;
+}
+#skilllist .checked .checkmark{
+    color: red;
+    opacity: 1;
+    animation: checking 1s ease;
+}
+ 
+@keyframes checking {
+  0% { transform:translateX(-0.5rem) }
+  10% { transform:translateX(0) }
+  15% { transform:translateX(-0.4rem) }
+  20% { transform:translateX(0) }
+  30% { transform:translateX(-0.3rem) }
+  40% { transform:translateX(0) }
+  50% { transform:translateX(-0.2rem) }
+  60% { transform:translateX(0) }
+  70% { transform:translateX(-0.2rem) }
+  80% { transform:translateX(0) }
+  90% { transform:translateX(-0.1rem) }
+  100% { transform:translateX(0px) }
+}
 
 
 
 
+
+
+
+/*contact*/
+#contact .contactcomment{
+    padding: 10px 0 30px;
+}
+
+table.formTable{
+	width:80%;
+	margin:0 auto;
+	border-collapse:collapse;
+}
+table.formTable td,table.formTable th{
+	border:1px solid #ccc;
+	padding:10px;
+}
+table.formTable th{
+	width:30%;
+	font-weight:normal;
+	background:#efefef;
+	text-align:left;
+}
+table.formTable input{
+    width: 90%;
+}
+table.formTable textarea{
+    width: 90%;
+}
+#contact .centerflex{
+    display: flex;
+    justify-content: center;
+}
+#contact .submit-btn{
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+#contact .submit-btn input{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
+#contact .submit-btn::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background:linear-gradient(to right, rgba(0, 4, 255, 0.658) ,#000 50%, rgba(0, 4, 255, 0.658) 100%);
+    transform: scale(0,1);
+    transform-origin: center;
+    transition: 0.5s;
+}
+#contact .submit-btn:hover::before{
+    transform: scale(1,1);
+}
 
 /*responsive---------------------------------------------*/
 @media screen and (max-width:700px){
+    .resbreak{
+        display: block;
+    }
     #mainvisual::after{
         right: 43%;
     }
@@ -282,10 +434,36 @@ h2{
     #about img{
         margin-bottom: 20px;
     }
+    #service .sectioncontent{
+        flex-direction: column;
+    }
+    #service .servicecontent{
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    #service .servicecontent h3{
+        width: 100%;
+    }
+    #service .servicecontent img{
+        width: 40vw;
+        height: 40vw;
+    }
+    #service .servicecontent p{
+        width: 50%;
+        padding: 10px 5px;
+    }
+
+
+
+    table.formTable{
+        width:100%;
+    }
 }
 
 
-@media screen and (min-width:1900px){
+@media screen and (min-width:1890px){
     #btnbox{
         display: none;
     }

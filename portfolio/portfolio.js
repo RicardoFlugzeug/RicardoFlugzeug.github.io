@@ -17,13 +17,34 @@ $(function(){
 
     //scrool
     ScrollReveal().reveal('.appeal', { 
-        duration: '800', // アニメーションの完了にかかる時間
-        viewFactor: '0.2', // 0~1,どれくらい見えたら実行するか
+        duration: '2000', // アニメーションの完了にかかる時間
+        viewFactor: '0.3', // 0~1,どれくらい見えたら実行するか
         distance: '200px',
-        reset: true   // 何回もアニメーション表示するか
+        reset: false   // 何回もアニメーション表示するか
       });
 
-    //scroll
+    //scroll check
+    $(window).on('load scroll',function (){
+		$('.skilllist').each(function(){
+			//ターゲットの位置を取得
+			var target1 = $(this).offset().top;
+			//スクロール量を取得
+			var scroll1 = $(window).scrollTop();
+			//ウィンドウの高さを取得
+			var winheight1 = $(window).height();
+			//ターゲットまでスクロールするとフェードインする
+			if (scroll1 > target1 - winheight1 + 200){
+				//クラスを付与
+                $(this).addClass('checked');
+			}else if (scroll1 < target1 - winheight1 + 200){
+                $(this).removeClass('checked');
+            }
+		});
+	});
+
+    
+
+    //scroll header
     $(window).on('load scroll',function (){
 		$('#headertop').each(function(){
 			// //ターゲットの位置を取得
