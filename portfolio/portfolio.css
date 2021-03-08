@@ -288,10 +288,13 @@ h2{
 }
 #service h3{
     width: 150px;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 #service img{
     padding: 3vw;
+}
+#service .servicecontent p{
+    line-height: 2rem;
 }
 #service .sectionend{
     display: flex;
