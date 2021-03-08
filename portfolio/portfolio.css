@@ -347,9 +347,45 @@ h2{
   100% { transform:translateX(0px) }
 }
 
+/*achivement*/
+#achievement .sites{
+    width: 100%;
+    padding: 50px 30px;
+    background: rgba(0, 28, 87, 0.2);
+    border-radius: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#achievement .sites a{
+    width: 70%;
+}
+#achievement .sites a:hover{
+    filter: opacity(0.7);
+}
+.comment{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 
-
+/*PR*/
+#pr div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#pr p{
+    display: inline-block;
+    text-align: center;
+    font-size: 3vw;
+    line-height: 6vw;
+    padding: 50px 0 0;
+    font-weight: bold;
+    background: linear-gradient(to bottom, transparent, transparent 80%, rgb(251, 255, 0) 100%);
+}
 
 
 
@@ -506,8 +542,10 @@ table.formTable textarea{
         width: 50%;
         padding: 10px 5px;
     }
-
-
+    #pr p{
+        font-size: 5vw;
+        line-height: 10vw;
+    }
 
     table.formTable{
         width:100%;

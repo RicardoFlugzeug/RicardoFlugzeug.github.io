@@ -22,6 +22,12 @@ $(function(){
         distance: '200px',
         reset: false   // 何回もアニメーション表示するか
       });
+    ScrollReveal().reveal('.appeal-achi', { 
+    duration: '1000', // アニメーションの完了にかかる時間
+    viewFactor: '0.1', // 0~1,どれくらい見えたら実行するか
+    distance: '200px',
+    reset: false   // 何回もアニメーション表示するか
+    });
 
     //scroll check
     $(window).on('load scroll',function (){
