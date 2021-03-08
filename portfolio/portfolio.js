@@ -17,7 +17,7 @@ $(function(){
 
     //scrool
     ScrollReveal().reveal('.appeal', { 
-        duration: '2000', // アニメーションの完了にかかる時間
+        duration: '1000', // アニメーションの完了にかかる時間
         viewFactor: '0.3', // 0~1,どれくらい見えたら実行するか
         distance: '200px',
         reset: false   // 何回もアニメーション表示するか
