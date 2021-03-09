@@ -20,7 +20,7 @@ img{
     width: 100%;
 }
 .wrapper{
-    padding: 0 6%;
+    padding: 0 4%;
     max-width: 1500px;
     margin: 0 auto;
 }
@@ -116,9 +116,9 @@ h1{
     position: fixed;
     z-index: 30;
     right: 0;
-    width: 50px;
+    width: 30px;
     height: 10vh;
-    margin-right: 6%;
+    margin-right: 4%;
     display: flex;
     align-items: center;
 }
