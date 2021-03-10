@@ -437,10 +437,6 @@ a.article-btn span:hover::before{
 #compare{
     text-align: center;
 }
-#compare p.arrow{
-    font-size: 2rem;
-    color: red;
-}
 #compare h2{
     width: 80%;
     margin: 20px auto;
