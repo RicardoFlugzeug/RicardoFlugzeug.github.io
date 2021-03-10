@@ -199,7 +199,7 @@ h1{
 }
 #first h2{
     padding-left: 10px;
-    background: linear-gradient(to right,red 0% 1% ,rgba(255, 0, 0, 0.5) 80%,transparent 100%);
+    background: linear-gradient(to right,red 0% 80%,transparent 100%);
     margin-bottom: 20px;
     text-align: left;
 }
