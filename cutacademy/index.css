@@ -410,7 +410,7 @@ a.article-btn span:hover::before{
     font-size: 3vw;
     font-weight: bold;
     padding: 10px 0 2px;
-    background: linear-gradient(to bottom, transparent 0% 80% ,rgb(251, 255, 0) 100%);
+    background: linear-gradient(to bottom, white 0% 80% ,rgb(251, 255, 0) 80% 100%);
 }
 .reasons .reasonswrap .reasontitle h3.maintitle strong{
     color:rgb(255, 0, 149);
