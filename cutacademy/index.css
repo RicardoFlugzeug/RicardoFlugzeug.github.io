@@ -199,6 +199,9 @@ h1{
     margin-bottom: 20px;
     text-align: left;
 }
+#first img{
+    width: 900px;
+}
 #first .box{
     margin-top: 50px;
     border: 3px solid rgba(0, 0, 0, 0.1);
@@ -752,7 +755,10 @@ a.article-btn span:hover::before{
         letter-spacing: unset !important;
         width: unset !important;
     }
-    
+    /*first*/
+    #first img{
+        width: 100%;
+    }
     /*achievement*/
     #achievement li.right{
         flex-direction: column-reverse;
