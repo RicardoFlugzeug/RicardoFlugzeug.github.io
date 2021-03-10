@@ -1,0 +1,840 @@
+@charset "UTF-8";
+
+/*general--------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+ul{
+    list-style: none;
+}
+.wrapper{
+    padding: 0 7%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    filter: opacity(0.7);
+}
+.resbreak{
+    display: none;
+}
+
+
+/*header*/
+#header{
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    background: #fff;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+}
+#header a.site-title{
+    width: 30vw;
+    padding-right: 10vw;
+}
+h1{
+    line-height: 0;
+}
+#header nav{
+    width: 70vw;
+}
+#header #prehead{
+    font-size: 0.8rem;
+    position: fixed;
+    top: 10px;
+    right: 4%;
+}
+#header nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#header nav li{
+    width: 24%;
+    text-align: center;
+    padding: 10px 0;
+}
+#header nav li a{
+    padding-bottom: 7px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+#header nav ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background:linear-gradient(to right, #fff ,rgb(255, 0, 0) 50%, #fff 100%);
+    transform: scale(0.2,1);
+    transform-origin: center;
+    transition: 0.5s;
+}
+#header nav ul li a:hover::before{
+    transform: scale(1,1);
+}
+
+/*main---------------------------------------------*/
+#main{
+    padding-top: 15vh;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+#main section span{
+    font-size: 0.6rem;
+}
+#main section{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#main section h2{
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#main section p{
+    line-height: 1.7rem;
+}
+
+/*mainvisual*/
+#mainvisual{
+    position: relative;
+}
+#mainvisual img.mainvisual{
+    height: 85vh;
+    object-fit: cover;
+    object-position: left;
+}
+#mainvisual .maincomment{
+    position: absolute;
+    z-index: 5;
+    top: 50vh;
+    right: 10vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#mainvisual p{
+    display: inline-block;
+    color: #fff;
+    filter: drop-shadow(16px 16px 10px black);
+}
+#mainvisual p:first-child{
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1rem;
+    background: linear-gradient(to bottom, transparent 0% 80% ,red 100%);
+    margin-bottom: 10px;
+}
+#mainvisual .maincomment a{
+    display: inline-block;
+    color: #fff;
+    margin:20px 10vw 0;
+    padding: 20px;
+    background:rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+#mainvisual .maincomment a:hover{
+    transform: translateY(8px);
+    background:rgba(255, 0, 0, 0.5);
+}
+.arrowscroll{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: unset;
+    height: 30vh;
+    animation: wavy 3s ease infinite;
+}
+@keyframes wavy {
+  0% { transform:translateY(0) }
+  50% { transform:translateY(-15px) }
+  100% { transform:translateY(0) }
+}
+
+
+/*first*/
+#first{
+    margin-top: 20px;
+    text-align: center;
+}
+#first .articlelink{
+    text-decoration: underline;
+    display: inline-block;
+    margin: 20px 0;
+}
+.articlelink:after {
+    font-family: 'FontAwesome';
+    content: '\f08e';
+    font-size: 0.9em;
+    margin: 0 3px 0 2px;
+}
+#first h2{
+    padding-left: 10px;
+    background: linear-gradient(to right,red 0% 1% ,rgba(255, 0, 0, 0.5) 80%,transparent 100%);
+    margin-bottom: 20px;
+    text-align: left;
+}
+#first .box{
+    margin-top: 50px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+}
+#first h3{
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 0.5rem;
+    background: linear-gradient(to bottom, transparent 0% 80% ,red 100%);
+    width: 40rem;
+    margin: 0 auto 20px; 
+}
+#first ul{
+    text-align: left;
+}
+#first ul li{
+    padding: 10px;
+    margin-left: 5px;
+}
+#first ul li::before{
+    content: "▶︎";
+    color: red;
+    font-size: 0.8rem;
+    padding-right: 5px;
+}
+
+/*achievement*/
+#achievement{
+    text-align: center;
+}
+#achievement h2{
+    background: linear-gradient(to right,transparent 0%,rgba(255, 0, 0, 0.7) 20%, red 50% ,rgba(255, 0, 0, 0.7) 80%,transparent 100%);
+    text-align: center;
+}
+#achievement h2 b{
+    color: rgb(255, 251, 0);
+}
+#achievement ul li{
+    margin:20px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+#achievement .voice{
+    width:80%;
+    padding: 10px;
+    border-radius: 5px;
+    background:rgba(0, 0, 0, 0.05);
+    position: relative;
+    text-align: left;
+}
+#achievement .voice h3{
+    padding: 10px;
+}
+#achievement .voicephoto{
+    width: 10%;
+}
+#achievement .voicephoto p{
+    font-size: 0.5rem;
+    text-align: center;
+}
+#achievement .right .voice::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    right: -15px;
+    top: 20px;
+    border-left: 15px solid rgba(0, 0, 0, 0.05);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+#achievement .left .voice::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: -15px;
+    top: 20px;
+    border-right: 15px solid rgba(0, 0, 0, 0.05);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+/*freelesson button*/
+.freelesson{
+    text-align: center;
+}
+.freelesson span{
+    display: block;
+}
+a.article-btn span{
+    font-size: 1rem !important;
+}
+a.article-btn{
+    width: 250px;
+    height: 50px;
+    display: inline-block;
+    color: red;
+    font-weight: bold;
+    line-height: 50px;
+    margin: 10px 0;
+    position: relative;
+}
+a.article-btn span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+a.article-btn::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:2px;
+    width: 25%;
+    background-color: red;
+    transition: 0.5s;
+}
+a.article-btn:hover::after{
+    width:100%;
+}
+a.article-btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:50%;
+    width: 2px;
+    background-color: red;
+    transition: 0.5s;
+}
+a.article-btn:hover::before{
+    height:100%;
+}
+a.article-btn span::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height:2px;
+    width: 25%;
+    background-color: red;
+    transition: 0.5s;
+}
+a.article-btn span:hover::after{
+    width:100%;
+}
+a.article-btn span::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height:50%;
+    width: 2px;
+    background-color: red;
+    transition: 0.5s;
+}
+a.article-btn span:hover::before{
+    height:100%;
+}
+
+
+/*breakphoto*/
+#breakphoto{
+    width: 100vw;
+    height: 30vh;
+    background-image: url(breakphoto.jpg);
+    background-attachment: fixed;
+    filter: grayscale(0.7);
+    background-position: bottom;
+    background-size: cover;
+}
+/*reasons*/
+.reasons{
+    text-align: center;
+}
+.reasons h2{
+    width: 80%;
+    margin: 30px auto;
+    background: red;
+}
+.reasons .reasonswrap{
+    width: 80%;
+    margin: 0 auto;
+}
+.reasons .reasonswrap img{
+    width: 80%;
+}
+
+.reasons .reasonswrap .box{
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.05);
+    width: 600px;
+    padding: 50px;
+    margin: 20px auto 0;
+}
+.reasons .reasonswrap .reasontitle{
+    margin: 10px 0 30px;
+}
+.reasons .reasonswrap .reasontitle p.pretitle{
+    letter-spacing: 0.5rem;
+}
+.reasons .reasonswrap .reasontitle h3.maintitle{
+    display: inline-block;
+    font-size: 3vw;
+    font-weight: bold;
+    padding: 10px 0 2px;
+    background: linear-gradient(to bottom, transparent 0% 80% ,rgb(251, 255, 0) 100%);
+}
+.reasons .reasonswrap .reasontitle h3.maintitle strong{
+    color:rgb(255, 0, 149);
+}
+.reasons .reasonswrap .box .youtube{
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+.reasons .reasonswrap .box .youtube iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.reasons .reasonswrap .box span{
+    padding: 10px 0;
+}
+
+
+/*compare*/
+#compare{
+    text-align: center;
+}
+#compare p.arrow{
+    font-size: 2rem;
+    color: red;
+}
+#compare h2{
+    width: 80%;
+    margin: 20px auto;
+    background: red;
+    border-radius: 50px;
+}
+#compare h2 strong{
+    color:rgb(255, 251, 0);
+}
+#compare img{
+    width: 64%;
+    margin-bottom: 20px;
+}
+
+/*recommendation*/
+#recommend{
+    position: relative;
+}
+#recommend img.recommend-background{
+    position: absolute;
+    height: 400px;
+    width: 100vw;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(1);
+}
+#recommend h2{
+    margin: 10px auto;
+    position: absolute;
+    top: 0;
+    width: 100% !important;
+    text-align: center;
+    left: 0;
+    color:black !important;
+    background: linear-gradient(to right, transparent, white ,transparent) ;
+}
+#recommend .slick1{
+    padding-top: 100px;
+}
+#recommend ul li .recommendbox{
+    display: flex;
+    padding-bottom: 20px;
+
+}
+#recommend .recommendphoto{
+    width: 20%;
+    text-align: center;
+}
+#recommend .recommendphoto img{
+    border-radius: 50%;
+    width: 100px;
+    margin: 0 auto;
+}
+#recommend .recommendcontents{
+    width: 80%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#recommend .recommendname{
+    font-weight: bold;
+}
+#recommend .introduce{
+    font-size: 0.8rem;
+}
+#recommend .articlelink{
+    text-decoration: underline;
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 0.7rem;
+}
+#recommend .recommendcontents p.profile{
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 0;
+}
+#recommend .additional{
+    font-size: 0.4rem;
+}
+
+/*step*/
+#step{
+    text-align: center;
+}
+#step h2{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: red;
+}
+#step img{
+    width: 500px;
+    padding: 20px;
+}
+
+
+/*courses*/
+#courses{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+#courses h2{
+    color: black !important;
+    border-top: 10px solid red;
+    border-bottom: 10px solid red;
+}
+#courses p{
+    padding-top: 30px;
+    font-weight: bold;
+}
+#courses a{
+    text-decoration: underline;
+    padding: 10px 0;
+}
+#courses a:hover{
+    color: rgba(255, 0, 0, 0.9);
+}
+
+
+/*review*/
+#review h2{
+    background: linear-gradient(to right,red 0% 70%,transparent 100%);
+    padding-left: 20px;
+}
+#review h3{
+    border-left: rgb(255, 0, 149) 4px solid;
+    padding: .7em 0 .7em .8em;
+    margin-top: 1.8em;
+}
+#review p{
+    padding-top: 5px;
+}
+#review p.question{
+    font-weight: bold;
+    padding-top: 20px;
+}
+#review p.question::before{
+    content: "Q：";
+    font-weight: bold;
+}
+#review p.thank{
+    font-weight: bold;
+    padding-top: 20px;
+}
+#review p:not(.question,.thank){
+    padding-left: 10px;
+}
+#review .readmore{
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    transition: 0.5s;
+}
+#review .readmore:hover{
+    transform: translateX(2px);
+}
+
+/*footer*/
+#footer{
+    background: rgba(0, 0, 0, 0.05);
+}
+#footer .footercontents{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+#footer ul{
+    width: 45%;
+}
+#footer li{
+    margin: 0 auto;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    font-size:0.8rem;
+}
+#footer li a::before{
+    content: "▶︎";
+    font-size: 0.7rem;
+    padding-right: 5px;
+}
+#footer li a{
+    display: inline-block;
+    width: 100%;
+}
+#footer .copyright p{
+    text-align: center;
+    font-size: 0.5rem;
+    padding: 10px 0;
+}
+
+/*responsive---------------------------------------------*/
+@media screen and (max-width:828px){
+
+    .resbreak{
+        display: block;
+    }
+
+    /*header*/
+    #header a.site-title {
+        width: 270px;
+    }
+    /*button*/
+    #btnbox{
+        position: fixed;
+        z-index: 30;
+        top: 3vh;
+        right: 0;
+        width: 30px;
+        height: 10vh;
+        margin-right: 4%;
+        display: flex;
+        align-items: center;
+    }
+    .toggle-btn{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition:0.5s;
+    }
+    .toggle-btn span{
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background: rgb(255, 0, 0);
+        transition: 0.5s;
+    }
+    .open .toggle-btn span{
+        background: rgb(255, 255, 255);
+    }
+    .toggle-btn span:nth-child(1){
+        top: 8px;
+    }
+    .toggle-btn span:nth-child(2){
+        bottom: 8px;
+    }
+    .open .toggle-btn span:nth-child(1){
+        transform: rotate(405deg) translateY(8px);
+    }
+    .open .toggle-btn span:nth-child(2){
+        transform: rotate(-405deg) translateY(-8px) ;
+    }
+    .open .toggle-btn{
+        transform: translateX(4px);
+    }
+    /*opennav*/
+    nav{
+        opacity: 0;
+        position: fixed;
+        top: 20vh;
+        left: -200px;
+        transition: 0.5s;
+        padding: 30px;
+    }
+    nav ul{
+        flex-direction: column!important;
+    }
+    nav ul li a::before{
+        height: 0 !important;;
+    }
+    nav li{
+        padding: 20px 0;
+        width: 200px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    nav li:first-child{
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    nav a{
+        color: #fff;
+        display: inline-block;
+    }
+    .open nav{
+        transform: translateX(200px);
+        opacity: 1;
+        z-index: 30;
+    }
+    /*mask*/
+    #mask{
+        display: none;
+    }
+    .open #mask{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+        z-index: 20;
+    }
+
+
+    /*mainvisual*/
+    .maincomment p:first-child{
+        font-size: 7vw !important;
+    }
+    .maincomment p:nth-child(2){
+        font-size: 3vw !important;
+    }
+
+    /*main--------------------------*/
+    h2, #first h3{
+        font-size: 4vw;
+        letter-spacing: unset !important;
+        width: unset !important;
+    }
+    
+    /*achievement*/
+    #achievement li.right{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #achievement li.left{
+        flex-direction: column;
+        align-items: center;
+    }
+    #achievement .voice{
+        width: 100%;
+    }
+    #achievement .voicephoto{
+        width: 50%;
+    }
+    #achievement .voice::before{
+        display: none !important;
+    }
+
+    /*breakphoto*/
+    #breakphoto{
+        background-attachment: scroll;
+    }
+
+    /*reasons*/
+    .reasons .reasonswrap{
+        width: 100%;
+    }
+    .reasons .reasonswrap .box{
+        width: 100%;
+        padding: 10px;
+    }
+    .reasons .reasonswrap .reasontitle p.pretitle{
+        letter-spacing: 0.1rem !important;
+    }
+    .reasons .reasonswrap .reasontitle h3.maintitle{
+        padding-top: 0;
+        font-size: 4.5vw;
+        font-weight: bold;
+    }
+
+    /*recommend*/
+    #recommend h2{
+        font-size: 1.5rem;
+    }
+    #recommend img.recommend-background{
+        height: 600px;
+    }
+    #recommend .recommendbox{
+        flex-direction: column;
+    }
+    #recommend .recommendphoto{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    #recommend .recommendphoto img{
+        width: 20vw;
+        height: 20vw;
+        margin: 0;
+    }
+    #recommend .recommendphoto div{
+        width: 70%;
+    }
+    #recommend .recommendcontents{
+        width: 100%;
+        height: min-content;
+    }
+    #recommend .additional{
+        font-size: 0.4rem;
+    }
+
+
+    /*step*/
+    #step h2{
+        margin-top: 20vw;
+    }
+    #step img{
+        width: 100%;
+    }
+}
