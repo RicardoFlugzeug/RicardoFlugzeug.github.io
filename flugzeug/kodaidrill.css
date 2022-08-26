@@ -53,6 +53,12 @@
 #timer::before{
     content:"StopWatch："
 }
+#timer2{
+    text-align: right;
+}
+#timer2::before{
+    content:"StopWatch："
+}
 #buttonBlock{
     text-align: center;
     margin:5px 0px;
