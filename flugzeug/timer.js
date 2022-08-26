@@ -5,6 +5,7 @@
     //取得したデータを変数に代入
 
     var timer = document.getElementById('timer');
+    var timer2 = document.getElementById('timer2');
     var start = document.getElementById('start');
     var stop = document.getElementById('stop');
     var reset = document.getElementById('reset');
@@ -45,6 +46,7 @@
 
         //HTMLのid　timer部分に表示させる　
         timer.textContent = m + ':' + s + ':' + ms;
+        timer2.textContent = m + ':' + s + ':' + ms;
     }
 
 
