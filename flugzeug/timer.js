@@ -76,7 +76,7 @@
 
         //再帰的に使えるように関数を作る
         countUp();
-    });
+    };
 
     //stopボタンにクリック時のイベントを追加(タイマーストップイベント)
     //stop.addEventListener('click',function(){
@@ -90,7 +90,7 @@
         //タイマーを再開させたら0になってしまう。elapsedTime = Date.now - startTime
         //それを回避するためには過去のスタート時間からストップ時間までの経過時間を足してあげなければならない。elapsedTime = Date.now - startTime + timeToadd (timeToadd = ストップを押した時刻(Date.now)から直近のスタート時刻(startTime)を引く)
        timeToadd += Date.now() - startTime;
-    });
+    };
 
     //resetボタンにクリック時のイベントを追加(タイマーリセットイベント)
     //reset.addEventListener('click',function(){
@@ -105,5 +105,5 @@
         //updateTimetTextで0になったタイムを表示
         updateTimetText();
 
-    });
+    };
 })();
