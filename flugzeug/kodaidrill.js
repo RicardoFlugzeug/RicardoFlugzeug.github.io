@@ -123,7 +123,7 @@ function questionRefresh() {
     var rand72=Math.floor(Math.random()*3+3); //3-5
     var rand73=Math.floor(Math.random()*6+10); //10-15
     var rand74=(rand72-1)*rand73;
-    question[7]="現在母が"+(rand71+rand74)+"歳，娘が"+rand71+"歳である。母の年齢が娘の"+rand72+"倍になるのは，何年後でしょうか？";
+    question[7]="現在母が"+(rand71+rand74)+"歳，娘が"+rand71+"歳です。母の年齢が娘の"+rand72+"倍になるのは，何年後でしょうか？";
     answer[7]=(rand73-rand71)+"年後";
 
     //８問目
@@ -518,7 +518,7 @@ function questionRefresh() {
     var rand484=rand480*rand483; //あたり本数
     var rand485=rand481*rand481; //分母
     var rand486=rand483*(rand481-rand483)*2; //分子
-    question[48]=rand482+"本のうち"+rand484+"本にあたりがあるくじがある。最初にαさんがくじをひき結果を見てくじを戻し、その後にβさんがくじを引いた。この時、どちらか１人のみがあたりを引いた確率はいくつでしょうか？";
+    question[48]=rand482+"本のうち"+rand484+"本にあたりがあるくじがあります。最初にαさんがくじをひき結果を見てくじを戻し、その後にβさんがくじを引きました。この時、どちらか１人のみがあたりを引いた確率はいくつでしょうか？";
     answer[48]=rand486+"/"+rand485;
 
     //４９問目
