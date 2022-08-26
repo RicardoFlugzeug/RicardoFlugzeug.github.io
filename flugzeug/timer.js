@@ -93,8 +93,9 @@
     });
 
     //resetボタンにクリック時のイベントを追加(タイマーリセットイベント)
-    reset.addEventListener('click',function(){
+    //reset.addEventListener('click',function(){
 
+    function resetnow(){  
         //経過時刻を更新するための変数elapsedTimeを0にしてあげつつ、updateTimetTextで0になったタイムを表示。
         elapsedTime = 0;
 
