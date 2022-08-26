@@ -68,7 +68,8 @@
     }
 
     //startボタンにクリック時のイベントを追加(タイマースタートイベント)
-    start.addEventListener('click',function(){
+    function startnow(){
+    //start.addEventListener('click',function(){
 
         //在時刻を示すDate.nowを代入
         startTime = Date.now();
@@ -78,8 +79,9 @@
     });
 
     //stopボタンにクリック時のイベントを追加(タイマーストップイベント)
-    stop.addEventListener('click',function(){
+    //stop.addEventListener('click',function(){
 
+    function stopnow(){
         //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
        clearTimeout(timerId);
 
