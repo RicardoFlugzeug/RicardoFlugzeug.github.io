@@ -159,14 +159,14 @@ function questionRefresh() {
     var rand121=Math.floor(Math.random()*10+10)*500; //5000-9500
     var rand122=Math.floor(Math.random()*(rand121/500-5))*500;
     var rand123=Math.floor(Math.random()*4+1)*500; //500-2000
-    question[12] ="AさんはB君に"+rand121+"円を渡してTシャツを買ってもらえないか頼みました。次の日、B君が買ってくれたTシャツは実際には"+rand122+"円でした。実は、元々B君はAさんに"+rand123+"円借りていた場合，B君はAさんにいくら返せば２人の貸し借りがなくなるでしょうか？";
+    question[12] ="α君はβ君に"+rand121+"円を渡してTシャツを買ってもらえないか頼みました。次の日、β君が買ってくれたTシャツは実際には"+rand122+"円でした。実は、元々β君はα君に"+rand123+"円借りていた場合，β君はα君にいくら返せば２人の貸し借りがなくなるでしょうか？";
     answer[12] =(rand121-rand122-rand123)+"円";
     }else{
     //１２問目-2
     var rand121=Math.floor(Math.random()*10+10)*500; //5000-9500
     var rand122=Math.floor(Math.random()*(rand121/500-5))*500;
     var rand123=Math.floor(Math.random()*4+1)*500; //500-2000
-    question[12] ="AさんはB君に"+rand121+"円を渡してTシャツを買ってもらえないか頼みました。次の日、B君が買ってくれたTシャツは実際には"+rand122+"円でした。実は、元々AさんはB君に"+rand123+"円借りていた場合，B君はAさんにいくら返せば２人の貸し借りがなくなるでしょうか？";
+    question[12] ="α君はB君に"+rand121+"円を渡してTシャツを買ってもらえないか頼みました。次の日、β君が買ってくれたTシャツは実際には"+rand122+"円でした。実は、元々α君はβ君に"+rand123+"円借りていた場合，β君はα君にいくら返せば２人の貸し借りがなくなるでしょうか？";
     answer[12] =(rand121-rand122+rand123)+"円";
     }
 
@@ -176,7 +176,7 @@ function questionRefresh() {
     var rand133=Math.floor(Math.random()*5+5)*5; //5-9 *5
     var rand134=rand132*36/10;
     var rand135=rand132*rand133-rand131;
-    question[13]="時速"+rand134+"kmで走る長さ"+rand131+"mの列車が，長さ"+rand135+"mのトンネルに入ってから完全に出るまで何秒かかるでしょうか？";
+    question[13]="時速"+rand134+"kmで走る長さ"+rand131+"mの電車が，長さ"+rand135+"mのトンネルに入ってから完全に出るまで何秒かかるでしょうか？";
     answer[13]=rand133+"秒";
 
     //１４問目
@@ -185,7 +185,7 @@ function questionRefresh() {
     var rand143=Math.floor(Math.random()*5+5)*5; //3-9 *5
     var rand144=rand142*36/10;
     var rand145=rand142*rand143-rand141;
-    question[14]="長さ"+rand141+"mの列車が，長さ"+rand145+"mの橋を完全に渡り終えるま"+rand143+"秒かかったという。列車の時速は何km/hでしょうか？";
+    question[14]="長さ"+rand141+"mの電車が，長さ"+rand145+"mの橋を完全に渡り終えるまでに"+rand143+"秒かかったという。電車の時速は何km/hでしょうか？";
     answer[14]=rand144+"km/h";
 
     //１５問目
@@ -194,7 +194,7 @@ function questionRefresh() {
     var rand153=Math.floor(Math.random()*7+3)*5; //3-9 *5
     var rand154=rand152*36/10;
     var rand155=rand152*rand153+rand151;
-    question[15]=rand154+"km/hで走る長さ"+rand151+"mの列車が，長さ"+rand155+"mのトンネルに完全に隠れているのは何秒間でしょうか？";
+    question[15]=rand154+"km/hで走る長さ"+rand151+"mの電車が，長さ"+rand155+"mのトンネルに完全に隠れているのは何秒間でしょうか？";
     answer[15]=rand153+"秒間";
 
     //１６問目
@@ -202,7 +202,7 @@ function questionRefresh() {
     var rand162=Math.floor(Math.random()*(rand161*20/3-9)+9)*15/100;
     var rand163=Math.floor(Math.random()*6+5)*20; 
     var rand164=Math.round(Math.abs(rand161*100-rand162*100))*(rand163/20)/3/100;
-    question[16]="一周"+rand164+"kmの池の周りをP君が時速"+rand161+"km、Q君が時速"+rand162+"kmで同じ方向に歩きます。追い越すのは何分後でしょうか？";
+    question[16]="一周"+rand164+"kmの池の周りをα君が時速"+rand161+"km、β君が時速"+rand162+"kmで同じ方向に歩きます。追い越すのは何分後でしょうか？";
     answer[16]=rand163+"分後";
 
     //１７問目
@@ -210,7 +210,7 @@ function questionRefresh() {
     var rand172=Math.floor(Math.random()*(rand171*20/3-9)+9)*15/100;
     var rand173=Math.floor(Math.random()*6+5)*20; 
     var rand174=Math.round(Math.abs(rand171*100+rand172*100))*(rand173/20)/3/100;
-    question[17]="一周"+rand174+"kmの池の周りをP君が時速"+rand171+"km、Q君が時速"+rand172+"kmで反対方向に歩きます。出会うのは何分後でしょうか？";
+    question[17]="一周"+rand174+"kmの池の周りをα君が時速"+rand171+"km、β君が時速"+rand172+"kmで反対方向に歩きます。出会うのは何分後でしょうか？";
     answer[17]=rand173+"分後";
 
     //１８問目
@@ -219,7 +219,7 @@ function questionRefresh() {
     var rand183=(rand182-1)*10;
     var rand184=rand181*rand182;
     var rand185=rand184/6;
-    question[18]="家から駅まで"+rand185+"kmある。太郎君は時速"+rand181+"kmで駅に向かい，"+rand183+"分後に兄が時速X kmで駅に向かった。その結果、太郎君と兄は同時に駅に着いた。さて兄は時速何km/hで走ったでしょうか？";
+    question[18]="家から駅まで"+rand185+"kmあります。航大君は時速"+rand181+"kmで駅に向かい，"+rand183+"分後に兄が時速X kmで駅に向かいました。その結果、航大君と兄は同時に駅に着きました。さて兄は時速何km/hで走ったでしょうか？";
     answer[18]=rand184+"km/h";
 
     //１９問目
@@ -244,7 +244,7 @@ function questionRefresh() {
     var rand212=Math.floor(Math.random()*2+1)*2+1;
     var rand213=Math.floor(Math.random()*3+1)*5*(rand211+rand212);
     var rand214=rand213*rand211/(rand211+rand212);
-    question[21]="A君B君の家は"+rand213+"km離れています。お互いの家に向けて同時に，Aは時速"+rand211+"km，Bは時速"+rand212+"kmで走り出したら，A君は出会うまでに何km歩く必要があるでしょうか？";
+    question[21]="α君とβ君の家は"+rand213+"km離れています。お互いの家に向けて同時に，α君は時速"+rand211+"km，β君は時速"+rand212+"kmで走り出したら，α君は出会うまでに何km走る必要があるでしょうか？";
     answer[21]=rand214+"km";
 
     //２２問目
@@ -276,7 +276,7 @@ function questionRefresh() {
     var rand242=Math.floor(Math.random()*16+5);
     var rand243=Math.floor(Math.random()*16+5);
     var rand244=Math.floor(Math.random()*16+5);
-    question[24]=(rand241+rand242+rand243+rand244)+"人のクラスでアンケートを取りました。その結果、スマホを持っている人は"+(rand241+rand244)+"人、パソコンを持っている人は"+(rand241+rand242)+"人，どちらも持っている人は"+rand241+"人でした。どちらも持っていないは何人ですか？";
+    question[24]=(rand241+rand242+rand243+rand244)+"人のクラスでアンケートを取りました。その結果、iPadを持っている人は"+(rand241+rand244)+"人、Macbookを持っている人は"+(rand241+rand242)+"人，どちらも持っている人は"+rand241+"人でした。どちらも持っていないは何人ですか？";
     answer[24]=rand213+"人";
 
     //２５問目
@@ -284,7 +284,7 @@ function questionRefresh() {
     var rand252=Math.floor(Math.random()*11+20);
     var rand253=Math.floor(Math.random()*11+20);
     var rand254=rand252+rand253-rand251;
-    question[25]=rand251+"人のクラスでアンケートを取りました。その結果、スマホを持っている人は"+rand252+"人，パソコンを持っている人は"+rand253+"人でした。どちらも持っている人は最低でも何人はいますか？";
+    question[25]=rand251+"人のクラスでアンケートを取りました。その結果、iPadを持っている人は"+rand252+"人，Macbookを持っている人は"+rand253+"人でした。どちらも持っている人は最低でも何人はいますか？";
     answer[25]=rand254+"人";
 
     //２６問目
@@ -292,7 +292,7 @@ function questionRefresh() {
     var rand262=Math.floor(Math.random()*10+3)*5;
     var rand263=Math.floor(Math.random()*3+1)*2000;
     var rand264=rand263*(100-rand261)*(100-rand262)/10000;
-    question[26]=rand263+"ページある本があります。A君は月曜日に全体の"+rand261+"%を読みました。そして火曜日には残りのページの"+rand262+"％を読みました。残っているのは何ページでしょうか？";
+    question[26]=rand263+"ページある本があります。α君は1日目に全体の"+rand261+"%を読みました。そして2日目には残りのページの"+rand262+"％を読みました。残っているのは何ページでしょうか？";
     answer[26]=rand264+"ページ";
 
     //２7問目
@@ -340,7 +340,7 @@ function questionRefresh() {
     var rand324=(rand321+rand322)/2;
     var rand325=rand321*rand323;
     var rand326=rand322*rand323;
-    question[32]="静水時に時速"+rand324+"kmの船が川の上流と下流にある２つの町を往復しています。行きは"+rand325+"時間，帰りは"+rand326+"時間かかるとすると，町は何km離れていますか。";
+    question[32]="時速"+rand324+"kmで進む力のある船が川の上流と下流にある２つの町を往復しています。行きは"+rand325+"時間，帰りは"+rand326+"時間かかるとすると，町は何km離れていますか。";
     answer[32]=(rand326*rand321)+"km";
 
     //３３問目
@@ -349,7 +349,7 @@ function questionRefresh() {
     var rand334=rand332/(2*rand333-1);
     var rand335=rand332/(4*rand333-1);
     var rand336=Math.ceil((rand332/30+1)/rand333);
-    question[33]="水槽に一定の水が入っていて，そこへ常に水が一定量入り続けている。そこで2台の排水ポンプを使うと"+rand334+"分で空になりました。また、4台の排水ポンプを使った場合では"+rand335+"分で空になりました。30分以内に空にするには何台必要でしょうか？";
+    question[33]="水槽に一定の水が入っていて，そこへ常に水が一定量入り続けています。そこで2台の排水ポンプを使うと"+rand334+"分で空になりました。また、4台の排水ポンプを使った場合では"+rand335+"分で空になりました。30分以内に空にするには何台必要でしょうか？";
     answer[33]=rand336+"台";
 
     //３４問目
@@ -359,10 +359,10 @@ function questionRefresh() {
     var rand344=rand341/3;
     var rand345=(rand341-rand342*8)/3;
     if (Math.floor(Math.random()*2) === 1){
-        question[34]="P君だと一人で"+rand343+"日，Q君だと一人で"+rand344+"日かかる仕事があります。最初に2人で"+rand342+"日間働き，残りをQ君一人でやると，あと何日で終わりますか？";
+        question[34]="α君だと一人で"+rand343+"日，β君だと一人で"+rand344+"日かかる仕事があります。最初に2人で"+rand342+"日間働き，残りをβ君一人でやると，あと何日で終わりますか？";
         answer[34]=rand345+"日";
     }else{
-        question[34]="P君だと一人で"+rand343+"日，Q君だと一人で"+rand344+"日かかる仕事があります。最初に2人で"+rand342+"日間働き，残りをQ君一人でやると，全部で何日で終わりますか？";
+        question[34]="α君だと一人で"+rand343+"日，β君だと一人で"+rand344+"日かかる仕事があります。最初に2人で"+rand342+"日間働き，残りをβ君一人でやると，全部で何日で終わりますか？";
         answer[34]=(rand345+rand342)+"日";
     }
 
@@ -375,7 +375,7 @@ function questionRefresh() {
     }
     var rand353=Math.floor(Math.random()*21+50);
     var rand354=(rand352-50)/10*rand351+rand353;
-    question[35]="次の時の、A君の点数を求めてください。標準偏差："+rand351+"、偏差値："+rand352+"、平均点："+rand353+"点";
+    question[35]="次の時の、航大君の点数を求めてください。標準偏差："+rand351+"、偏差値："+rand352+"、平均点："+rand353+"点";
     answer[35]=rand354+"点";
 
     //３６問目
@@ -391,7 +391,7 @@ function questionRefresh() {
         var rand366=rand363+"円の飴"
         answer[36]=rand362+"個";
     }
-    question[36]="A君は50円のチョコと"+rand363+"円の飴を買おうと思い、ぴったりの金額である"+rand364+"円持って駄菓子屋へ行きました。しかし、それぞれの買う個数を逆にしてしまったため払ったお金は"+rand365+"円でした。元々の予定では"+rand366+"をいくつ買うつもりだったでしょうか？";
+    question[36]="航大君は50円のチョコと"+rand363+"円の飴を買おうと思い、ぴったりの金額である"+rand364+"円持って駄菓子屋へ行きました。しかし、それぞれの買う個数を逆にしてしまったため払ったお金は"+rand365+"円でした。元々の予定では"+rand366+"をいくつ買うつもりだったでしょうか？";
 
     //３７問目
     var rand371=Math.floor(Math.random()*7+5)*15; 
@@ -445,7 +445,7 @@ function questionRefresh() {
         var rand410="チョコ";
         answer[41]=rand416+"個";
     }
-    question[41]=rand411+"円のラムネ，"+rand414+"円のキャンディ，"+rand412+"円のチョコを合計"+(rand415+rand416+rand417)+"個を"+rand418+"円で買いました。キャンディをチョコの"+rand413+"倍の数だけ買った時，"+rand410+"はいくつ買いましたか？";
+    question[41]="航大君は"+rand411+"円のラムネ，"+rand414+"円のキャンディ，"+rand412+"円のチョコを合計"+(rand415+rand416+rand417)+"個を"+rand418+"円で買いました。キャンディをチョコの"+rand413+"倍の数だけ買った時，"+rand410+"はいくつ買いましたか？";
 
     //４２問目
     var rand421=Math.floor(Math.random()*17+4); 
@@ -494,7 +494,7 @@ function questionRefresh() {
     var rand463=Math.floor(Math.random()*21+20); 
     var rand464=rand462*6/100;
     var rand465=(rand462-rand461)*rand463;
-    question[46]="静水時の速さが時速"+rand464+"kmの船があります。川の流れの速さが分速"+rand461+"mのとき、この船が"+rand465+"m上るのにかかる時間は何分でしょう。";
+    question[46]="時速"+rand464+"kmで進む力のある船があります。川の流れの速さが分速"+rand461+"mのとき、この船が"+rand465+"m上るのにかかる時間は何分でしょう。";
     answer[46]=rand463+"分";
 
     //４７問目
@@ -507,7 +507,7 @@ function questionRefresh() {
     var rand474=(rand479+rand478)/(rand479-rand478)*rand473;  //追い越され間隔
     var rand475=rand472*6/100;
 
-    question[47]="ある線路に沿った道路を、A君は分速"+rand471+"mの速さの自転車で走っています。線路には電車が両方向に等間隔で走っています。その時、A君は"+rand474+"分おきに電車に追いこされ，"+rand473+"分おきに電車とすれちがいました。電車の速さは時速何kmでしょうか。";
+    question[47]="ある線路に沿った道路を、航大君は分速"+rand471+"mの速さの自転車で走っています。線路には電車が両方向に等間隔で走っています。その時、航大君は"+rand474+"分おきに電車に追いこされ，"+rand473+"分おきに電車とすれちがいました。電車の速さは時速何kmでしょうか。";
     answer[47]=rand475+"km/h";
 
     //４８問目
@@ -518,7 +518,7 @@ function questionRefresh() {
     var rand484=rand480*rand483; //あたり本数
     var rand485=rand481*rand481; //分母
     var rand486=rand483*(rand481-rand483)*2; //分子
-    question[48]=rand482+"本のうち"+rand484+"本にあたりがあるくじがある。最初にAさんがくじをひき結果を見てくじを戻し、その後にBさんがくじを引いた。この時、どちらか１人のみがあたりを引いた確率はいくつでしょうか？";
+    question[48]=rand482+"本のうち"+rand484+"本にあたりがあるくじがある。最初にαさんがくじをひき結果を見てくじを戻し、その後にβさんがくじを引いた。この時、どちらか１人のみがあたりを引いた確率はいくつでしょうか？";
     answer[48]=rand486+"/"+rand485;
 
     //４９問目
@@ -556,7 +556,7 @@ function questionRefresh() {
    //５０問目
    var rand501=Math.floor(Math.random()*50+51); 
    var rand502=(1+rand501)*rand501/2;
-   question[50]="一回目の操作では１段目に石を１つ置く。二回目の操作では、２段目に石を２つ置く。三回目の操作では、３段目に石を３つ置く。このようにして同様の操作を行っていく場合を考える。では、"+rand501+"回の操作をし終わった時、石は合計でいくつ置いたでしょうか？";
+   question[50]="一回目の操作では１行目に石を１つ置く。二回目の操作では、２行目に石を２つ並べる。三回目の操作では、３行目に石を３つ並べる。このようにして同様の操作を行っていく場合を考えます。では、"+rand501+"回の操作をし終わった時、石は合計でいくつ置いたでしょうか？";
    answer[50]=rand502+"個";
 
 }
