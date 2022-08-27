@@ -11,9 +11,9 @@
     var reset = document.getElementById('reset');
     
     
-    var start2 = document.getElementById('starttwo');
-    var stop2 = document.getElementById('stoptwo');
-    var reset2 = document.getElementById('resettwo');
+    var start2 = document.getElementById('start2');
+    var stop2 = document.getElementById('stop2');
+    var reset2 = document.getElementById('reset2');
 
     //クリック時の時間を保持するための変数定義
     var startTime;
