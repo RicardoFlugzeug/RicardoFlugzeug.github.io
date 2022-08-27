@@ -110,41 +110,41 @@
     
     
     
-//     //----------------------後から追加-----------------------------------------------------
+    //----------------------後から追加-----------------------------------------------------
     
-//     //startボタンにクリック時のイベントを追加(タイマースタートイベント)
-//     start2.addEventListener('click',function(){
+    //startボタンにクリック時のイベントを追加(タイマースタートイベント)
+    start2.addEventListener('click',function(){
 
-//         //在時刻を示すDate.nowを代入
-//         startTime = Date.now();
+        //在時刻を示すDate.nowを代入
+        startTime = Date.now();
 
-//         //再帰的に使えるように関数を作る
-//         countUp();
-//     });
+        //再帰的に使えるように関数を作る
+        countUp();
+    });
 
-//     //stopボタンにクリック時のイベントを追加(タイマーストップイベント)
-//     stop2.addEventListener('click',function(){
-//         //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
-//        clearTimeout(timerId);
+    //stopボタンにクリック時のイベントを追加(タイマーストップイベント)
+    stop2.addEventListener('click',function(){
+        //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
+       clearTimeout(timerId);
 
 
-//         //タイマーに表示される時間elapsedTimeが現在時刻かたスタートボタンを押した時刻を引いたものなので、
-//         //タイマーを再開させたら0になってしまう。elapsedTime = Date.now - startTime
-//         //それを回避するためには過去のスタート時間からストップ時間までの経過時間を足してあげなければならない。elapsedTime = Date.now - startTime + timeToadd (timeToadd = ストップを押した時刻(Date.now)から直近のスタート時刻(startTime)を引く)
-//        timeToadd += Date.now() - startTime;
-//     });
+        //タイマーに表示される時間elapsedTimeが現在時刻かたスタートボタンを押した時刻を引いたものなので、
+        //タイマーを再開させたら0になってしまう。elapsedTime = Date.now - startTime
+        //それを回避するためには過去のスタート時間からストップ時間までの経過時間を足してあげなければならない。elapsedTime = Date.now - startTime + timeToadd (timeToadd = ストップを押した時刻(Date.now)から直近のスタート時刻(startTime)を引く)
+       timeToadd += Date.now() - startTime;
+    });
 
-//     //resetボタンにクリック時のイベントを追加(タイマーリセットイベント)
-//     reset2.addEventListener('click',function(){
+    //resetボタンにクリック時のイベントを追加(タイマーリセットイベント)
+    reset2.addEventListener('click',function(){
   
-//         //経過時刻を更新するための変数elapsedTimeを0にしてあげつつ、updateTimetTextで0になったタイムを表示。
-//         elapsedTime = 0;
+        //経過時刻を更新するための変数elapsedTimeを0にしてあげつつ、updateTimetTextで0になったタイムを表示。
+        elapsedTime = 0;
 
-//         //リセット時に0に初期化したいのでリセットを押した際に0を代入してあげる
-//         timeToadd = 0;
+        //リセット時に0に初期化したいのでリセットを押した際に0を代入してあげる
+        timeToadd = 0;
 
-//         //updateTimetTextで0になったタイムを表示
-//         updateTimetText();
+        //updateTimetTextで0になったタイムを表示
+        updateTimetText();
 
-//    });
+   });
 })();
