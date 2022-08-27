@@ -9,6 +9,11 @@
     var start = document.getElementById('start');
     var stop = document.getElementById('stop');
     var reset = document.getElementById('reset');
+    
+    
+    var start2 = document.getElementById('start2');
+    var stop2 = document.getElementById('stop2');
+    var reset2 = document.getElementById('reset2');
 
     //クリック時の時間を保持するための変数定義
     var startTime;
@@ -68,20 +73,17 @@
     }
 
     //startボタンにクリック時のイベントを追加(タイマースタートイベント)
-    function startnow(){
-    //start.addEventListener('click',function(){
+    start.addEventListener('click',function(){
 
         //在時刻を示すDate.nowを代入
         startTime = Date.now();
 
         //再帰的に使えるように関数を作る
         countUp();
-    };
+    });
 
     //stopボタンにクリック時のイベントを追加(タイマーストップイベント)
-    //stop.addEventListener('click',function(){
-
-    function stopnow(){
+    stop.addEventListener('click',function(){
         //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
        clearTimeout(timerId);
 
@@ -90,12 +92,11 @@
         //タイマーを再開させたら0になってしまう。elapsedTime = Date.now - startTime
         //それを回避するためには過去のスタート時間からストップ時間までの経過時間を足してあげなければならない。elapsedTime = Date.now - startTime + timeToadd (timeToadd = ストップを押した時刻(Date.now)から直近のスタート時刻(startTime)を引く)
        timeToadd += Date.now() - startTime;
-    };
+    });
 
     //resetボタンにクリック時のイベントを追加(タイマーリセットイベント)
-    //reset.addEventListener('click',function(){
-
-    function resetnow(){  
+    reset.addEventListener('click',function(){
+  
         //経過時刻を更新するための変数elapsedTimeを0にしてあげつつ、updateTimetTextで0になったタイムを表示。
         elapsedTime = 0;
 
@@ -105,5 +106,45 @@
         //updateTimetTextで0になったタイムを表示
         updateTimetText();
 
-    };
+    });
+    
+    
+    
+    //----------------------後から追加-----------------------------------------------------
+    
+    //startボタンにクリック時のイベントを追加(タイマースタートイベント)
+    start2.addEventListener('click',function(){
+
+        //在時刻を示すDate.nowを代入
+        startTime = Date.now();
+
+        //再帰的に使えるように関数を作る
+        countUp();
+    });
+
+    //stopボタンにクリック時のイベントを追加(タイマーストップイベント)
+    stop2.addEventListener('click',function(){
+        //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
+       clearTimeout(timerId);
+
+
+        //タイマーに表示される時間elapsedTimeが現在時刻かたスタートボタンを押した時刻を引いたものなので、
+        //タイマーを再開させたら0になってしまう。elapsedTime = Date.now - startTime
+        //それを回避するためには過去のスタート時間からストップ時間までの経過時間を足してあげなければならない。elapsedTime = Date.now - startTime + timeToadd (timeToadd = ストップを押した時刻(Date.now)から直近のスタート時刻(startTime)を引く)
+       timeToadd += Date.now() - startTime;
+    });
+
+    //resetボタンにクリック時のイベントを追加(タイマーリセットイベント)
+    reset2.addEventListener('click',function(){
+  
+        //経過時刻を更新するための変数elapsedTimeを0にしてあげつつ、updateTimetTextで0になったタイムを表示。
+        elapsedTime = 0;
+
+        //リセット時に0に初期化したいのでリセットを押した際に0を代入してあげる
+        timeToadd = 0;
+
+        //updateTimetTextで0になったタイムを表示
+        updateTimetText();
+
+    });
 })();
