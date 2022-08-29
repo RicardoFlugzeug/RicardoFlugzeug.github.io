@@ -423,6 +423,23 @@ display: none;
 
 
 
+/*ボタン　オレンジ*/
+.orange-btn a{
+ display:block;
+ text-decoration:none;
+ padding:7px 10px;
+ border-radius:4px;
+ font-weight:bold;
+ color:white;/* ボタンの文字色 */
+ background-color:#f39800;/* ボタンの背景色 */
+ box-shadow:0 2px #541a0b;/* ボタンの影の色 */
+ transition:transform 0.3s;
+ text-align:center;
+}
+.article-btn a:hover{
+    transform:scale(1.1);
+}
+
 /*記事内ボタン。カテゴリトップ水色*/
 .article-btn a{
  display:block;
@@ -439,7 +456,6 @@ display: none;
 .article-btn a:hover{
     transform:scale(1.1);
 }
-
 
 
 /* 吹き出しのCSS　*/
