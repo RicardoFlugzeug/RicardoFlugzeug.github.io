@@ -178,7 +178,7 @@ height: 120px; /*サムネイルが画像の縦幅*/
 
 /*　手書き風BOX 1　*/
 .kakomi {
- margin: 1em auto;
+ margin: 0.1em;
  padding: 1em;
  width: 70%;
  color: #000000; /* 文字色 */
