@@ -180,7 +180,7 @@ height: 120px; /*サムネイルが画像の縦幅*/
 .kakomi {
  margin: 0.1em;
  padding: 1em;
- width: 70%;
+ width: 90%;
  color: #000000; /* 文字色 */
  background-color: #e0eeff; /* 背景色 */
  box-shadow: 0 0 5px 2px #42adff, 0 0 5px 2px #42adff inset; /* 影 */
