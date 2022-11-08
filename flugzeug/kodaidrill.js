@@ -277,7 +277,7 @@ function questionRefresh() {
     var rand243=Math.floor(Math.random()*16+5);
     var rand244=Math.floor(Math.random()*16+5);
     question[24]=(rand241+rand242+rand243+rand244)+"人のクラスでアンケートを取りました。その結果、iPadを持っている人は"+(rand241+rand244)+"人、Macbookを持っている人は"+(rand241+rand242)+"人，どちらも持っている人は"+rand241+"人でした。どちらも持っていないは何人ですか？";
-    answer[24]=rand213+"人";
+    answer[24]=rand243+"人";
 
     //２５問目
     var rand251=Math.floor(Math.random()*1+40); //40
