@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>とらべるぶっく</title>
-    <link rel="stylesheet" href="travelblog.css">
+    <title>予約詳細</title>
+    <link rel="stylesheet" href="hotel_ex.css">
     <link rel="shortcut icon" href="travelblog.ico">
 </head>
 <body>
     <header id="header">
-        <h1 class="wrapper"><a href="travelblog.html">とらべるぶっく</a></h1>
+        <h1 class="wrapper"><a href="hotel_ex.html">予約詳細</a></h1>
         <nav>
             <ul class="wrapper">
                 <li><a href="">TOP</a></li>
@@ -21,70 +21,7 @@
             </ul>
         </nav>
     </header>
-    <div id="pickup" class="wrapper">
-        <div class="autoplay-slider">
-            <div class="slide"><span>
-                <article>
-                    <img src="pick1.jpg" alt="">
-                    <h2>圧巻の大自然！週末のアウトドアはここできまり！</h2>
-                </article>
-            </span></div>
-            <div class="slide"><span>
-                <article>
-                    <img src="pick2.jpg" alt="">
-                    <h2>まるでラプンツェル？幻想的な湖でカヌーに挑戦！</h2>
-                </article>
-            </span></div>
-            <div class="slide"><span>
-                <article>
-                    <img src="pick3.jpg" alt="">
-                    <h2>初心者がサーフィンやってみた！</h2>
-                </article>
-            </span></div>
-            <div class="slide"><span>
-                <article>
-                    <img src="pick4.jpg" alt="">
-                    <h2>「世界一〇〇な海」１５選！</h2>
-                </article>
-            </span></div>
-            <div class="slide"><span>
-                <article>
-                    <img src="pick5.jpg" alt="">
-                    <h2>ルワンダの山奥にいる日本人に会ってきた！？！</h2>
-                </article>
-            </span></div>
-            <div class="slide"><span>
-                <article>
-                    <img src="pick1.jpg" alt="">
-                    <h2>圧巻の大自然！週末のアウトドアはここできまり！</h2>
-                </article>
-            </span></div>
-            <div class="slide"><span>
-                <article>
-                    <img src="pick2.jpg" alt="">
-                    <h2>まるでラプンツェル？幻想的な湖でカヌーに挑戦！</h2>
-                </article>
-            </span></div>
-            <div class="slide"><span>
-                <article>
-                    <img src="pick3.jpg" alt="">
-                    <h2>初心者がサーフィンやってみた！</h2>
-                </article>
-            </span></div>
-            <div class="slide"><span>
-                <article>
-                    <img src="pick4.jpg" alt="">
-                    <h2>「世界一〇〇な海」１５選！</h2>
-                </article>
-            </span></div>
-            <div class="slide"><span>
-                <article>
-                    <img src="pick5.jpg" alt="">
-                    <h2>ルワンダの山奥にいる日本人に会ってきた！？！</h2>
-                </article>
-            </span></div>
-        </div>
-    </div>
+
     <div id="container" class="flex-box wrapper">
         <main>
             <article>
